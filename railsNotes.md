@@ -22,7 +22,7 @@ HTTP-request-response-cycle: client (browser: postman) => server
 -You build an API so developers can hit that API and get information out.
 
 #RESTful routes
-~/.../rails-postman-practice/postman-practice // ♥ > rails routßes
+~/.../rails-postman-practice/postman-practice // ♥ > rails routes
 Prefix Verb URI Pattern Controller#Action
 sandwiches GET /sandwiches(.:format) sandwiches#index
 POST /sandwiches(.:format) sandwiches#create
@@ -37,6 +37,9 @@ DELETE /sandwiches/:id(.:format) sandwiches#destroy
 -1 restful route/controller action. PATCH/PUT are different types of HTTP request that both update and do the same thing.
 -PATCH updates just part of an entry.
 -PUT takes a copy of our old resource, then it changes out whichever column you switched.
+
+-Instance variables in Rails like: @sandwiches allow them to get passed around other instance methods.
+-If building a server side app, the @sandwiches variable would be available to you in the view. The view for the index is index.html or index.erb in Ruby. With the @sandwiches variable you would be able to access it within that view.
 
 Order of Rails Commands: 0. rails new project-name --api
 
