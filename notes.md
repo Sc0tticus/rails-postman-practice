@@ -44,3 +44,11 @@ Order of Rails Commands: 0. rails new project-name --api
    -using the resource command will give you all of the RESTful routes and the controller.
 2. rails db:migrate (migrates the database so you can start creating some seeds. Head over to db/schema.rb)
 3. rails db:seed
+   ~/.../rails-postman-practice/postman-practice // ♥ > rails c
+   Running via Spring preloader in process 21472
+   Loading development environment (Rails 6.0.3.6)
+   2.6.1 :001 > Sandwich.all
+   (1.3ms) SELECT sqlite*version(*)
+   Sandwich Load (0.5ms) SELECT "sandwiches".\_ FROM "sandwiches" LIMIT ? [["LIMIT", 11]]
+   => #<ActiveRecord::Relation [#<Sandwich id: 1, name: "Turkey", rating: 5, created_at: "2021-03-28 04:56:59", updated_at: "2021-03-28 04:56:59">, #<Sandwich id: 2, name: "BLT", rating: 4, created_at: "2021-03-28 04:56:59", updated_at: "2021-03-28 04:56:59">, #<Sandwich id: 3, name: "Roastbeef", rating: 3, created_at: "2021-03-28 04:56:59", updated_at: "2021-03-28 04:56:59">, #<Sandwich id: 4, name: "Ham", rating: 2, created_at: "2021-03-28 04:56:59", updated_at: "2021-03-28 04:56:59">, #<Sandwich id: 5, name: "Reuben", rating: 5, created_at: "2021-03-28 04:56:59", updated_at: "2021-03-28 04:56:59">]>
+4. rails s
