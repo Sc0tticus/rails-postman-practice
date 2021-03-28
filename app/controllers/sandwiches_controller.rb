@@ -8,6 +8,13 @@ class SandwichesController < ApplicationController
     render json: @sandwiches
   end
 
+  # /sandwiches/:id GET
+  def show
+    @sandwich = Sandwich.find(params[:id])
+
+    render json: @sandwich
+  end
+
   def update
     # /sanwiches/:id PATCH - PUT
     @sandwich = Sandwich.find(params[:id])
@@ -23,5 +30,14 @@ class SandwichesController < ApplicationController
     )
 
     render json: @sandwich
+  end
+
+  def destroy
+    # /sandwiches/:id DELETE
+    @sandwich = Sandwich.find(params[:id])
+
+    @sandwich.destroy
+
+    render json: "Sandwich #{@sandwich.id} has been destroyed"
   end
 end

@@ -120,3 +120,63 @@ Body-raw-JSON
 "created_at": "2021-03-28T23:28:32.153Z",
 "updated_at": "2021-03-28T23:28:32.153Z"
 }
+
+#DELETE
+DELETE: http://localhost:3000/sandwiches/1
+Sandwich 1 has been destroyed
+
+-to verify Sandwich 1 was deleted:
+GET: http://localhost:3000/sandwiches
+[
+{
+"id": 2,
+"name": "BLT",
+"rating": 4,
+"created_at": "2021-03-28T04:56:59.554Z",
+"updated_at": "2021-03-28T04:56:59.554Z"
+},
+{
+"id": 3,
+"name": "Roastbeef",
+"rating": 3,
+"created_at": "2021-03-28T04:56:59.559Z",
+"updated_at": "2021-03-28T04:56:59.559Z"
+},
+{
+"id": 4,
+"name": "Ham",
+"rating": 2,
+"created_at": "2021-03-28T04:56:59.563Z",
+"updated_at": "2021-03-28T04:56:59.563Z"
+},
+{
+"id": 5,
+"name": "Reuben",
+"rating": 5,
+"created_at": "2021-03-28T04:56:59.567Z",
+"updated_at": "2021-03-28T04:56:59.567Z"
+},
+{
+"id": 6,
+"name": "Turkey Bacon Ranch",
+"rating": 3,
+"created_at": "2021-03-28T23:28:32.153Z",
+"updated_at": "2021-03-28T23:28:32.153Z"
+}
+]
+
+GET: http://localhost:3000/sandwiches/2
+-will show the information for sandwich 2
+{
+"id": 2,
+"name": "BLT",
+"rating": 4,
+"created_at": "2021-03-28T04:56:59.554Z",
+"updated_at": "2021-03-28T04:56:59.554Z"
+}
+
+#Error codes
+-200's are ok, it means your request worked
+-300's are redirects
+-400's are client errors, meaning that however you sent the request was wrong is some kind of way. Means fix something on the frontend.
+-500's are server errors, meaning the request got to the server but the server broke. Means you should take a look at your backend.
