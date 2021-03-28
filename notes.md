@@ -21,7 +21,25 @@ HTTP-request-response-cycle: client (browser: postman) => server
 
 -You build an API so developers can hit that API and get information out.
 
-Order of Rails Commands: 0) rails new project-name --api
+#RESTful routes
+~/.../rails-postman-practice/postman-practice // ♥ > rails routßes
+Prefix Verb URI Pattern Controller#Action
+sandwiches GET /sandwiches(.:format) sandwiches#index
+POST /sandwiches(.:format) sandwiches#create
+sandwich GET /sandwiches/:id(.:format) sandwiches#show
+PATCH /sandwiches/:id(.:format) sandwiches#update
+PUT /sandwiches/:id(.:format) sandwiches#update
+DELETE /sandwiches/:id(.:format) sandwiches#destroy
+
+-Explaining the above routes, if you send a GET request to the route https:localhost:8000/sandwiches, you see that the controller is sandwiches and the action is #index.
+-If you send a POST request to https:localhost:8000/sandwiches the action is #create.
+-REST is just a design pattern, a convention that API's follow. Not all API's follow RESTful conventions. These routes you see is what you'll see for every single one of your controllers.
+-1 restful route/controller action. PATCH/PUT are different types of HTTP request that both update and do the same thing.
+-PATCH updates just part of an entry.
+-PUT takes a copy of our old resource, then it changes out whichever column you switched.
+
+Order of Rails Commands: 0. rails new project-name --api
 
 1. rails g resource Sandwich name rating:integer
    -using the resource command will give you all of the RESTful routes and the controller.
+2. rails db:migrate (migrates the database so you can start creating some seeds. Head over to db/schema.rb)
