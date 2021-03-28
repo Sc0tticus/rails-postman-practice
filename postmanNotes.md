@@ -109,3 +109,14 @@ BODY-raw-JSON
 "created_at": "2021-03-28T04:56:59.548Z",
 "updated_at": "2021-03-28T23:11:43.335Z"
 }
+
+#POST request
+POST: http://localhost:3000/sandwiches
+Body-raw-JSON
+{
+"id": 6,
+"name": "Turkey Bacon Ranch",
+"rating": 3,
+"created_at": "2021-03-28T23:28:32.153Z",
+"updated_at": "2021-03-28T23:28:32.153Z"
+}

@@ -14,4 +14,14 @@ class SandwichesController < ApplicationController
     @sandwich.update(rating: params[:rating])
     render json: @sandwich
   end
+
+  def create
+    # /sandwiches/:id POST - CREATE
+    @sandwich = Sandwich.create(
+      name: params[:name],
+      rating: params[:rating]
+    )
+
+    render json: @sandwich
+  end
 end
