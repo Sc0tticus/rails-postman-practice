@@ -18,3 +18,10 @@ HTTP-request-response-cycle: client (browser: postman) => server
 -once all that information comes back to the controller from the database, the controller will output a response, which will always be JSON.
 
 -Actions/Routes = RESTful routes. Can also create your own routes.
+
+-You build an API so developers can hit that API and get information out.
+
+Order of Rails Commands: 0) rails new project-name --api
+
+1. rails g resource Sandwich name rating:integer
+   -using the resource command will give you all of the RESTful routes and the controller.
