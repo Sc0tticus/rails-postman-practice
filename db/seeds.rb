@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Sandwich.create([
+	{name: "Turkey", rating: 5}, {name: "BLT", rating: 4}, {name: "Roastbeef", rating: 3}, {name: "Ham", rating: 2}, {name: "Reuben", rating: 5},
+])

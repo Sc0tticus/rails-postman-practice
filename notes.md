@@ -43,3 +43,4 @@ Order of Rails Commands: 0. rails new project-name --api
 1. rails g resource Sandwich name rating:integer
    -using the resource command will give you all of the RESTful routes and the controller.
 2. rails db:migrate (migrates the database so you can start creating some seeds. Head over to db/schema.rb)
+3. rails db:seed
